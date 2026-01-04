@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member | NGO DEMO Official Portal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+          
+ .apply-header {
+            background: linear-gradient(45deg, var(--primary), var(--ngo-green));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: -50px;
+        }
+
+
+     /* Donation Cards */
+        .payment-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            height: 100%;
+            border-top: 5px solid var(--danger);
+        }
+
+        .qr-wrapper {
+            background: #fff;
+            padding: 15px;
+            border: 2px solid #f1f1f1;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .bank-details p {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bank-details b { color: var(--navy); }
+
+        /* Step Process */
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--ngo-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+
+        /* Custom Donation Amount */
+        .amount-option {
+            border: 2px solid #ddd;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+            text-align: center;
+            background: white;
+        }
+        .amount-option:hover, .amount-option.active {
+            border-color: var(--ngo-green);
+            background: var(--ngo-green);
+            color: white;
+        }
+
+        .btn-donate-now {
+            background: var(--danger);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            border: none;
+            box-shadow: 0 10px 20px rgba(204, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+        .btn-donate-now:hover {
+            transform: translateY(-3px);
+            background: var(--navy);
+            color: white;
+        }
+
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+  <div class="ticker-bar">
+        <div class="container-fluid d-flex align-items-center">
+            <div class="ticker-label">LATEST</div>
+            <marquee behavior="scroll" direction="left" class="flex-grow-1">
+                KDS सेवा समिति की बैठक सम्पन्न • नए सदस्य आईडी कार्ड डाउनलोड करें • वृक्षारोपण कार्यक्रम 2026 • मानवता की सेवा ही सर्वोपरि है
+            </marquee>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="https://via.placeholder.com/50" class="me-2 rounded-circle shadow-sm" alt="Logo">
+                <h1 class="ngo-title">NGO DEMO</h1>
+            </div>
+            <div class="d-none d-md-flex gap-3 align-items-center">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">Language</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-danger rounded-pill fw-bold">Donate</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white d-lg-none fw-bold" href="index.html">MENU</a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#kdsNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="kdsNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="member.html">Member Apply</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ID Card</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="download-card.html">Download Card</a></li>
+                            <li><a class="dropdown-item" href="verification.html">Verification</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crowdfunding.html">Crowdfunding</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="audit-report.html">Audit Report</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Login</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                            <li><a class="dropdown-item" href="member-login.html">Member Login</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <section class="about-hero">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-3 fw-bold">About Us</h1>
+            <p class="fs-5 opacity-75">Know more about our journey, our values, and the people behind the change.</p>
+        </div>
+    </section> -->
+
+    <div class="apply-header">
+        <div class="container">
+            <h1 class="fw-bold">Member Membership Form</h1>
+            <p>Join our mission to create a positive impact in society.</p>
+        </div>
+    </div>
+
+
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5" data-aos="fade-right" style="height: 320px;">
+                    <div class="payment-card text-center mb-4">
+                        <h4 class="fw-bold mb-3">Quick Scan & Pay</h4>
+                        <div class="qr-wrapper mb-3" style="height: 100px;">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=9517048512@upi&pn=NGO%20DEMO" alt="UPI QR" style="height: 100%;">
+                        </div>
+                        <p class="mb-1 fw-bold">UPI ID: <span class="text-success">9517048512@upi</span></p>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo-vector.svg" width="60">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Pay_Logo.svg" width="60">
+                        </div>
+                    </div>
+
+                    <div class="payment-card" style="border-top-color: var(--ngo-green);">
+                        <h4 class="fw-bold mb-4"><i class="fa fa-university me-2 text-success"></i>Bank Transfer</h4>
+                        <div class="bank-details">
+                            <p>Account Name: <b>NGO DEMO SEVA SAMITI</b></p>
+                            <p>Bank: <b>State Bank of India</b></p>
+                            <p>A/C Number: <b>XXXXXXXXXXXXX</b></p>
+                            <p>IFSC Code: <b>SBIN00XXXXX</b></p>
+                            <p>Branch: <b>Aliganj, Lucknow</b></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="payment-card">
+                        <h3 class="fw-bold mb-4">Donor Information</h3>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12 mb-2">
+                                    <label class="form-label fw-bold">Choose an Amount (₹)</label>
+                                    <div class="row g-2">
+                                        <div class="col-4 col-md-3"><div class="amount-option">501</div></div>
+                                        <div class="col-4 col-md-3"><div class="amount-option">1100</div></div>
+                                        <div class="col-4 col-md-3"><div class="amount-option">2100</div></div>
+                                        <div class="col-4 col-md-3"><div class="amount-option active">5100</div></div>
+                                    </div>
+                                    <input type="number" class="form-control mt-3" placeholder="Enter Other Amount">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="Aapka Naam">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Mobile Number</label>
+                                    <input type="tel" class="form-control" placeholder="+91">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">PAN Number (For Tax Receipt)</label>
+                                    <input type="text" class="form-control" placeholder="ABCDE1234F">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">Message (Optional)</label>
+                                    <textarea class="form-control" rows="3" placeholder="Say something inspiring..."></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn-donate-now">Confirm Donation <i class="fa fa-heart ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white" style="">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">Donation <span class="text-success">Process</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="step-icon"><i class="fa fa-qrcode"></i></div>
+                    <h5>1. Scan & Pay</h5>
+                    <p class="text-muted small">QR code scan karein ya bank details ka use karein.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-icon"><i class="fa fa-share-square"></i></div>
+                    <h5>2. Share Details</h5>
+                    <p class="text-muted small">Payment ka screenshot WhatsApp par bhein (+91 9517048512).</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-icon"><i class="fa fa-file-invoice"></i></div>
+                    <h5>3. Get Receipt</h5>
+                    <p class="text-muted small">Aapko 24 ghante mein official receipt mil jayegi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>NGO DEMO</h5>
+                    <p class="opacity-75">NGO DEMO is a registered NGO dedicated to bringing positive change through education, health, and social welfare in Lucknow.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <a href="#" class="footer-link">Member Apply</a>
+                    <a href="#" class="footer-link">Download ID Card</a>
+                    <a href="#" class="footer-link">Audit Report</a>
+                    <a href="#" class="footer-link">Donors List</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
+                    <div class="contact-item"><i class="fa fa-map-marker-alt"></i><span>Aliganj, Lucknow - 201416</span></div>
+                    <div class="contact-item"><i class="fa fa-phone-alt"></i><span>+91 9517048512</span></div>
+                    <div class="contact-item"><i class="fa fa-envelope"></i><span>info@ngodemo.org</span></div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Certifications</h5>
+                    <img src="https://via.placeholder.com/200x100?text=80G+Verified+NGO" class="img-fluid rounded border border-secondary mb-3">
+                    <p class="small text-warning">Donations are tax-exempt under section 80G.</p>
+                </div>
+            </div>
+            
+            <hr class="mt-5 border-secondary">
+            <div class="row pb-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2026 NGO DEMO. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-donate"><a href="#"><i class="fa fa-heart me-2"></i> DONATE NOW</a></div>
+    <a href="https://wa.me/919517048512" class="wa-float text-white text-decoration-none shadow-lg"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

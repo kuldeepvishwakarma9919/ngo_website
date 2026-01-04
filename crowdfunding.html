@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member | NGO DEMO Official Portal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+          
+ .apply-header {
+            background: linear-gradient(45deg, var(--primary), var(--ngo-green));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: -50px;
+        }
+
+
+    /* Report Cards */
+  .campaign-card {
+            background: white; border-radius: 20px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: 0.3s;
+            margin-bottom: 30px; border: none;
+        }
+        .campaign-card:hover { transform: translateY(-10px); }
+        .campaign-img { height: 220px; width: 100%; object-fit: cover; }
+        
+        .campaign-content { padding: 25px; }
+        .category-badge {
+            background: rgba(0, 128, 0, 0.1); color: var(--ngo-green);
+            padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 700;
+        }
+
+        /* Progress Bar */
+        .progress { height: 10px; border-radius: 10px; background: #eee; margin: 20px 0 10px; }
+        .progress-bar { background: linear-gradient(90deg, var(--ngo-green), #32cd32); }
+
+        .stat-box { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 20px; }
+        .stat-val { font-weight: 700; color: var(--navy); }
+
+        .btn-donate-now {
+            background: var(--danger); color: white; width: 100%;
+            padding: 12px; border-radius: 10px; font-weight: 600;
+            border: none; transition: 0.3s;
+        }
+        .btn-donate-now:hover { background: var(--navy); transform: scale(1.02); }
+    </style>
+</head>
+<body>
+
+  <div class="ticker-bar">
+        <div class="container-fluid d-flex align-items-center">
+            <div class="ticker-label">LATEST</div>
+            <marquee behavior="scroll" direction="left" class="flex-grow-1">
+                KDS सेवा समिति की बैठक सम्पन्न • नए सदस्य आईडी कार्ड डाउनलोड करें • वृक्षारोपण कार्यक्रम 2026 • मानवता की सेवा ही सर्वोपरि है
+            </marquee>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="https://via.placeholder.com/50" class="me-2 rounded-circle shadow-sm" alt="Logo">
+                <h1 class="ngo-title">NGO DEMO</h1>
+            </div>
+            <div class="d-none d-md-flex gap-3 align-items-center">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">Language</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-danger rounded-pill fw-bold">Donate</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white d-lg-none fw-bold" href="index.html">MENU</a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#kdsNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="kdsNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="member.html">Member Apply</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ID Card</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="download-card.html">Download Card</a></li>
+                            <li><a class="dropdown-item" href="verification.html">Verification</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crowdfunding.html">Crowdfunding</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="audit-report.html">Audit Report</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Login</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                            <li><a class="dropdown-item" href="member-login.html">Member Login</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <section class="about-hero">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-3 fw-bold">About Us</h1>
+            <p class="fs-5 opacity-75">Know more about our journey, our values, and the people behind the change.</p>
+        </div>
+    </section> -->
+
+    <div class="apply-header">
+        <div class="container">
+            <h1 class="fw-bold">Member Membership Form</h1>
+            <p>Join our mission to create a positive impact in society.</p>
+        </div>
+    </div>
+
+
+   
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: var(--navy);">Help Us Make a Difference</h2>
+            <p class="text-muted">Aapka ek chota sa yogdaan kisi ki zindagi badal sakta hai.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="campaign-card">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000" class="campaign-img" alt="Food">
+                    <div class="campaign-content">
+                        <span class="category-badge">Hunger Relief</span>
+                        <h5 class="fw-bold mt-3">Feed 1000 Children this Month</h5>
+                        <p class="small text-muted">Winter season mein slum areas mein rehne waale bacho ko nutritious khana pahunchana hai.</p>
+                        
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 65%"></div>
+                        </div>
+                        <div class="stat-box">
+                            <div><span class="stat-val">₹65,000</span> <br><small>Raised</small></div>
+                            <div class="text-end"><span class="stat-val">₹1,00,000</span> <br><small>Goal</small></div>
+                        </div>
+                        
+                        <button class="btn-donate-now" onclick="location.href='payment.html'">DONATE NOW</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="campaign-card">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000" class="campaign-img" alt="Education">
+                    <div class="campaign-content">
+                        <span class="category-badge">Education</span>
+                        <h5 class="fw-bold mt-3">Scholarship for Higher Study</h5>
+                        <p class="small text-muted">Behtar bhavishya ke liye 50 honhaar bacho ki school fees aur books ka kharch uthayein.</p>
+                        
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 30%"></div>
+                        </div>
+                        <div class="stat-box">
+                            <div><span class="stat-val">₹1,50,000</span> <br><small>Raised</small></div>
+                            <div class="text-end"><span class="stat-val">₹5,00,000</span> <br><small>Goal</small></div>
+                        </div>
+                        
+                        <button class="btn-donate-now">DONATE NOW</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="campaign-card">
+                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1000" class="campaign-img" alt="Health">
+                    <div class="campaign-content">
+                        <span class="category-badge">Medical Care</span>
+                        <h5 class="fw-bold mt-3">Free Health Checkup Camp</h5>
+                        <p class="small text-muted">Gaon ke buzurgon aur mahilayon ke liye muft medical camp aur dawaiyon ka intezam.</p>
+                        
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                        <div class="stat-box">
+                            <div><span class="stat-val">₹42,500</span> <br><small>Raised</small></div>
+                            <div class="text-end"><span class="stat-val">₹50,000</span> <br><small>Goal</small></div>
+                        </div>
+                        
+                        <button class="btn-donate-now">DONATE NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>NGO DEMO</h5>
+                    <p class="opacity-75">NGO DEMO is a registered NGO dedicated to bringing positive change through education, health, and social welfare in Lucknow.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <a href="#" class="footer-link">Member Apply</a>
+                    <a href="#" class="footer-link">Download ID Card</a>
+                    <a href="#" class="footer-link">Audit Report</a>
+                    <a href="#" class="footer-link">Donors List</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
+                    <div class="contact-item"><i class="fa fa-map-marker-alt"></i><span>Aliganj, Lucknow - 201416</span></div>
+                    <div class="contact-item"><i class="fa fa-phone-alt"></i><span>+91 9517048512</span></div>
+                    <div class="contact-item"><i class="fa fa-envelope"></i><span>info@ngodemo.org</span></div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Certifications</h5>
+                    <img src="https://via.placeholder.com/200x100?text=80G+Verified+NGO" class="img-fluid rounded border border-secondary mb-3">
+                    <p class="small text-warning">Donations are tax-exempt under section 80G.</p>
+                </div>
+            </div>
+            
+            <hr class="mt-5 border-secondary">
+            <div class="row pb-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2026 NGO DEMO. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-donate"><a href="#"><i class="fa fa-heart me-2"></i> DONATE NOW</a></div>
+    <a href="https://wa.me/919517048512" class="wa-float text-white text-decoration-none shadow-lg"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

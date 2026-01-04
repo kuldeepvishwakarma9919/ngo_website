@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member | NGO DEMO Official Portal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+       
+        
+      
+        
+
+
+     /* Member Form Styling */
+        .apply-header {
+            background: linear-gradient(45deg, var(--primary), var(--ngo-green));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: -50px;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--accent);
+        }
+
+        .section-sub-title {
+            color: var(--primary);
+            font-weight: 700;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .form-label { font-weight: 600; color: #444; font-size: 14px; }
+        .form-control, .form-select {
+            border-radius: 8px;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.1);
+            border-color: var(--ngo-green);
+        }
+
+        .upload-box {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .upload-box:hover { border-color: var(--ngo-green); background: #f0fdf0; }
+
+        .btn-apply {
+            background: var(--ngo-green);
+            color: white;
+            font-weight: 700;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            transition: 0.4s;
+        }
+
+        .btn-apply:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+  <div class="ticker-bar">
+        <div class="container-fluid d-flex align-items-center">
+            <div class="ticker-label">LATEST</div>
+            <marquee behavior="scroll" direction="left" class="flex-grow-1">
+                KDS सेवा समिति की बैठक सम्पन्न • नए सदस्य आईडी कार्ड डाउनलोड करें • वृक्षारोपण कार्यक्रम 2026 • मानवता की सेवा ही सर्वोपरि है
+            </marquee>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="https://via.placeholder.com/50" class="me-2 rounded-circle shadow-sm" alt="Logo">
+                <h1 class="ngo-title">NGO DEMO</h1>
+            </div>
+            <div class="d-none d-md-flex gap-3 align-items-center">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">Language</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-danger rounded-pill fw-bold">Donate</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white d-lg-none fw-bold" href="index.html">MENU</a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#kdsNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="kdsNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="member.html">Member Apply</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ID Card</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="download-card.html">Download Card</a></li>
+                            <li><a class="dropdown-item" href="verification.html">Verification</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crowdfunding.html">Crowdfunding</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="audit-report.html">Audit Report</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Login</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                            <li><a class="dropdown-item" href="member-login.html">Member Login</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <section class="about-hero">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-3 fw-bold">About Us</h1>
+            <p class="fs-5 opacity-75">Know more about our journey, our values, and the people behind the change.</p>
+        </div>
+    </section> -->
+
+    <div class="apply-header">
+        <div class="container">
+            <h1 class="fw-bold">Member Membership Form</h1>
+            <p>Join our mission to create a positive impact in society.</p>
+        </div>
+    </div>
+
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="form-container" data-aos="fade-up">
+                        <form action="#" method="POST" enctype="multipart/form-data">
+                            
+                            <div class="section-sub-title"><i class="fa fa-user me-2 text-success"></i> Personal Details</div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name (हिंदी/English)</label>
+                                    <input type="text" class="form-control" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Father's / Husband's Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter name" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Gender</label>
+                                    <select class="form-select">
+                                        <option value="">Select Gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Blood Group</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>A+</option><option>A-</option>
+                                        <option>B+</option><option>B-</option>
+                                        <option>O+</option><option>O-</option>
+                                        <option>AB+</option><option>AB-</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="section-sub-title mt-5"><i class="fa fa-phone me-2 text-success"></i> Contact & Occupation</div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">WhatsApp Number</label>
+                                    <input type="tel" class="form-control" placeholder="+91" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="example@mail.com">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Occupation (व्यवसाय)</label>
+                                    <input type="text" class="form-control" placeholder="e.g. Teacher, Business, Student">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Education Qualification</label>
+                                    <input type="text" class="form-control" placeholder="Highest Degree">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Full Residential Address</label>
+                                    <textarea class="form-control" rows="3" placeholder="Street, City, Pincode"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="section-sub-title mt-5"><i class="fa fa-cloud-upload-alt me-2 text-success"></i> KYC Documents</div>
+                            <div class="row g-3">
+                                <div class="col-md-6 text-center">
+                                    <label class="form-label">Passport Size Photo</label>
+                                    <div class="upload-box" onclick="document.getElementById('photo').click()">
+                                        <i class="fa fa-image fa-2x text-muted mb-2"></i>
+                                        <p class="small mb-0">Click to Upload Photo</p>
+                                        <input type="file" id="photo" hidden accept="image/*">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <label class="form-label">Aadhar Card (Front & Back)</label>
+                                    <div class="upload-box" onclick="document.getElementById('aadhar').click()">
+                                        <i class="fa fa-id-card fa-2x text-muted mb-2"></i>
+                                        <p class="small mb-0">Click to Upload Aadhar</p>
+                                        <input type="file" id="aadhar" hidden accept="image/*,application/pdf">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 p-3 bg-light rounded border">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label small" for="terms">
+                                        I hereby declare that the information provided above is true to the best of my knowledge. I agree to follow the rules and regulations of <b>NGO DEMO</b> and work towards the welfare of society.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-5">
+                                <button type="submit" class="btn-apply shadow-lg">SUBMIT APPLICATION <i class="fa fa-paper-plane ms-2"></i></button>
+                                <p class="text-muted mt-3 small">After submission, our team will verify your details within 48 hours.</p>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>NGO DEMO</h5>
+                    <p class="opacity-75">NGO DEMO is a registered NGO dedicated to bringing positive change through education, health, and social welfare in Lucknow.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <a href="#" class="footer-link">Member Apply</a>
+                    <a href="#" class="footer-link">Download ID Card</a>
+                    <a href="#" class="footer-link">Audit Report</a>
+                    <a href="#" class="footer-link">Donors List</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
+                    <div class="contact-item"><i class="fa fa-map-marker-alt"></i><span>Aliganj, Lucknow - 201416</span></div>
+                    <div class="contact-item"><i class="fa fa-phone-alt"></i><span>+91 9517048512</span></div>
+                    <div class="contact-item"><i class="fa fa-envelope"></i><span>info@ngodemo.org</span></div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Certifications</h5>
+                    <img src="https://via.placeholder.com/200x100?text=80G+Verified+NGO" class="img-fluid rounded border border-secondary mb-3">
+                    <p class="small text-warning">Donations are tax-exempt under section 80G.</p>
+                </div>
+            </div>
+            
+            <hr class="mt-5 border-secondary">
+            <div class="row pb-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2026 NGO DEMO. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-donate"><a href="#"><i class="fa fa-heart me-2"></i> DONATE NOW</a></div>
+    <a href="https://wa.me/919517048512" class="wa-float text-white text-decoration-none shadow-lg"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

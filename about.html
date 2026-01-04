@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NGO DEMO Official Portal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+       
+        
+        /* About Page Specific Hero */
+        .about-hero { 
+            background: linear-gradient(rgba(26,42,108,0.8), rgba(0,128,0,0.7)), url('https://images.unsplash.com/photo-1524069290683-0457abfe42c3?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .section-padding { padding: 80px 0; }
+        .section-title { font-weight: 800; color: var(--primary); position: relative; padding-bottom: 15px; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background: var(--accent); }
+        .text-center .section-title::after { left: 50%; transform: translateX(-50%); }
+
+      
+
+        /* FOOTER */
+        footer { background: #111; color: #ccc; font-size: 14px; }
+        footer h5 { color: white; font-weight: 600; margin-bottom: 25px; border-left: 3px solid var(--accent); padding-left: 10px; }
+        .footer-link { color: #ccc; text-decoration: none; transition: 0.3s; display: block; margin-bottom: 10px; }
+        .footer-link:hover { color: var(--accent); transform: translateX(5px); }
+        .contact-item { display: flex; align-items: flex-start; margin-bottom: 15px; }
+        .contact-item i { color: var(--accent); margin-right: 12px; margin-top: 4px; }
+
+        .sticky-donate { position: fixed; left: -130px; top: 50%; transform: translateY(-50%); z-index: 999; transition: 0.3s; }
+        .sticky-donate:hover { left: 0; }
+        .sticky-donate a { background: var(--danger); color: white; padding: 12px 20px; border-radius: 0 50px 50px 0; text-decoration: none; font-weight: bold; display: flex; align-items: center; }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+  <div class="ticker-bar">
+        <div class="container-fluid d-flex align-items-center">
+            <div class="ticker-label">LATEST</div>
+            <marquee behavior="scroll" direction="left" class="flex-grow-1">
+                KDS सेवा समिति की बैठक सम्पन्न • नए सदस्य आईडी कार्ड डाउनलोड करें • वृक्षारोपण कार्यक्रम 2026 • मानवता की सेवा ही सर्वोपरि है
+            </marquee>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="https://via.placeholder.com/50" class="me-2 rounded-circle shadow-sm" alt="Logo">
+                <h1 class="ngo-title">NGO DEMO</h1>
+            </div>
+            <div class="d-none d-md-flex gap-3 align-items-center">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">Language</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-danger rounded-pill fw-bold">Donate</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white d-lg-none fw-bold" href="index.html">MENU</a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#kdsNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="kdsNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="member.html">Member Apply</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ID Card</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="download-card.html">Download Card</a></li>
+                            <li><a class="dropdown-item" href="verification.html">Verification</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crowdfunding.html">Crowdfunding</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="audit-report.html">Audit Report</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Login</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                            <li><a class="dropdown-item" href="member-login.html">Member Login</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-3 fw-bold">About Us</h1>
+            <p class="fs-5 opacity-75">Know more about our journey, our values, and the people behind the change.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title">Who We Are</h2>
+                    <p class="mt-4"><strong>NGO DEMO</strong> is a non-profit organization established with the goal of uplifting the underprivileged sections of society. Our work spans across rural and urban areas, focusing on sustainable development and immediate relief.</p>
+                    <p>Since our inception, we have been working tirelessly to ensure that basic rights like education, healthcare, and clean water are accessible to everyone, regardless of their socio-economic status.</p>
+                    <div class="bg-light p-4 rounded border-start border-4 border-success mt-4">
+                        <i class="fa fa-quote-left text-success mb-3"></i>
+                        <p class="fst-italic">"Helping one person might not change the world, but it could change the world for that one person."</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070" class="img-fluid rounded shadow-lg" alt="Our Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>NGO DEMO</h5>
+                    <p class="opacity-75">NGO DEMO is a registered NGO dedicated to bringing positive change through education, health, and social welfare in Lucknow.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <a href="#" class="footer-link">Member Apply</a>
+                    <a href="#" class="footer-link">Download ID Card</a>
+                    <a href="#" class="footer-link">Audit Report</a>
+                    <a href="#" class="footer-link">Donors List</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
+                    <div class="contact-item"><i class="fa fa-map-marker-alt"></i><span>Aliganj, Lucknow - 201416</span></div>
+                    <div class="contact-item"><i class="fa fa-phone-alt"></i><span>+91 9517048512</span></div>
+                    <div class="contact-item"><i class="fa fa-envelope"></i><span>info@ngodemo.org</span></div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Certifications</h5>
+                    <img src="https://via.placeholder.com/200x100?text=80G+Verified+NGO" class="img-fluid rounded border border-secondary mb-3">
+                    <p class="small text-warning">Donations are tax-exempt under section 80G.</p>
+                </div>
+            </div>
+            
+            <hr class="mt-5 border-secondary">
+            <div class="row pb-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2026 NGO DEMO. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-donate"><a href="#"><i class="fa fa-heart me-2"></i> DONATE NOW</a></div>
+    <a href="https://wa.me/919517048512" class="wa-float text-white text-decoration-none shadow-lg"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

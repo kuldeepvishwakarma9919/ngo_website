@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NGO DEMO Official Portal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .contact-hero { 
+            background: linear-gradient(rgba(26,42,108,0.8), rgba(204,0,0,0.7)), url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .contact-card { border: none; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: 0.3s; height: 100%; padding: 30px; background: white; }
+        .contact-card:hover { transform: translateY(-5px); border-bottom: 4px solid var(--ngo-green); }
+        .contact-icon { width: 60px; height: 60px; background: #f8f9fa; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--ngo-green); margin-bottom: 20px; }
+
+        .form-control { border-radius: 10px; padding: 12px; border: 1px solid #eee; }
+        .form-control:focus { border-color: var(--ngo-green); box-shadow: none; }
+        
+        .map-container { border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        /* Footer (Same as Home) */
+        footer { background: #111; color: #ccc; font-size: 14px; }
+        footer h5 { color: white; font-weight: 600; margin-bottom: 25px; border-left: 3px solid var(--accent); padding-left: 10px; }
+        .footer-link { color: #ccc; text-decoration: none; transition: 0.3s; display: block; margin-bottom: 10px; }
+        .footer-link:hover { color: var(--accent); transform: translateX(5px); }
+
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+    <div class="ticker-bar">
+        <div class="container-fluid d-flex align-items-center">
+            <div class="ticker-label">LATEST</div>
+            <marquee behavior="scroll" direction="left" class="flex-grow-1">
+                KDS सेवा समिति की बैठक सम्पन्न • संपर्क करें: +91 9517048512 • मानवता की सेवा ही सर्वोपरि है
+            </marquee>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="https://via.placeholder.com/50" class="me-2 rounded-circle shadow-sm" alt="Logo">
+                <h1 class="ngo-title">NGO DEMO</h1>
+            </div>
+            <a href="#" class="btn btn-danger rounded-pill fw-bold d-none d-md-block">Donate</a>
+        </div>
+    </div>
+
+   <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white d-lg-none fw-bold" href="index.html">MENU</a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#kdsNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="kdsNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="member.html">Member Apply</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ID Card</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="download-card.html">Download Card</a></li>
+                            <li><a class="dropdown-item" href="verification.html">Verification</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crowdfunding.html">Crowdfunding</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="audit-report.html">Audit Report</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Login</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                            <li><a class="dropdown-item" href="member-login.html">Member Login</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="contact-hero">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-4 fw-bold">Get In Touch</h1>
+            <p class="fs-5 opacity-75">Have questions? We are here to help and answer any question you might have.</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container mt-n5">
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto"><i class="fa fa-phone-alt"></i></div>
+                        <h5>Call Us</h5>
+                        <p class="text-muted">+91 9517048512<br>+91 7045654830</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto"><i class="fa fa-envelope"></i></div>
+                        <h5>Email Us</h5>
+                        <p class="text-muted">info@ngodemo.org<br>support@ngodemo.org</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon mx-auto"><i class="fa fa-map-marker-alt"></i></div>
+                        <h5>Visit Office</h5>
+                        <p class="text-muted">Aliganj, Lucknow<br>Uttar Pradesh - 201416</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="p-4 bg-white rounded-4 shadow-sm">
+                        <h3 class="fw-bold mb-4">Send Us a Message</h3>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-danger w-100 py-3 fw-bold rounded-pill">SEND MESSAGE</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="map-container h-100">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56963.53507127921!2d80.9145693!3d26.8338902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccaba890911ca9!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer class="pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>NGO DEMO</h5>
+                    <p class="opacity-75">NGO DEMO is a registered NGO dedicated to bringing positive change through education, health, and social welfare in Lucknow.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <a href="#" class="footer-link">Member Apply</a>
+                    <a href="#" class="footer-link">Download ID Card</a>
+                    <a href="#" class="footer-link">Audit Report</a>
+                    <a href="#" class="footer-link">Donors List</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
+                    <div class="contact-item"><i class="fa fa-map-marker-alt"></i><span>Aliganj, Lucknow - 201416</span></div>
+                    <div class="contact-item"><i class="fa fa-phone-alt"></i><span>+91 9517048512</span></div>
+                    <div class="contact-item"><i class="fa fa-envelope"></i><span>info@ngodemo.org</span></div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Certifications</h5>
+                    <img src="https://via.placeholder.com/200x100?text=80G+Verified+NGO" class="img-fluid rounded border border-secondary mb-3">
+                    <p class="small text-warning">Donations are tax-exempt under section 80G.</p>
+                </div>
+            </div>
+            
+            <hr class="mt-5 border-secondary">
+            <div class="row pb-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2026 NGO DEMO. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="https://wa.me/919517048512" class="wa-float text-white text-decoration-none shadow-lg"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
